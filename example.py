@@ -1,4 +1,4 @@
-from nanochatboy import NanoChatbot, Rule
+from nanochatbot import NanoChatbot, Rule
 
 train_data = [
     Rule(questions=["Qual é seu nome?", "Quem é você?"], answers=["Meu nome é nanochatbot.", "Nanochatbot."]),
