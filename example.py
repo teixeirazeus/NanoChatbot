@@ -1,26 +1,3 @@
-# NanoChatbot
-
-Nanochatbot is a simple chatbot with few lines of code, designed to be CPU efficient.
-If you are looking for more accurate chatbots with more options, look into rasa chatbot.
-
-## Installation
-
-```
-pip install -r requirements.txt
-```
-
-For portuguese support
-```
-python -m spacy download pt_core_news_lg
-```
-
-For english support
-```
-python -m spacy download pt_core_news_lg
-```
-
-## Quick Start
-```
 from nanochatboy import NanoChatbot, Rule
 
 train_data = [
@@ -38,4 +15,3 @@ while 1:
     i = input(":")
     if i == "q": break
     print(bot.respond(i))
-```
