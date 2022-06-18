@@ -7,12 +7,8 @@ Rule = namedtuple('Rule', 'questions answers')
 
 class NanoChatbot:
     def __init__(self, language='pt'):
-        if language == 'pt':
-            self.nlp = spacy.load("pt_core_news_lg")
-        elif language == 'en':
-            self.nlp = spacy.load("en_core_web_lg")
-        else:
-            raise ValueError("Language not supported.")
+        languages = {'pt': 'pt_core_news_lg', 'en': 'en_core_web_lg'}
+        self.nlp = spacy.load(languages[language])
         self.answers = []
         self.svm = None
     
@@ -25,13 +21,11 @@ class NanoChatbot:
         train_y = []
         for index, rule in enumerate(train_data):
             for question in rule.questions:
-                train_x.append(question)
+                train_x.append(self.nlp(question).vector)
                 train_y.append(index)
-
-        train_x_word_vectors = [self.nlp(text).vector for text in train_x]
         
         self.svm = svm.SVC(kernel='linear')
-        self.svm.fit(train_x_word_vectors, train_y)
+        self.svm.fit(train_x, train_y)
 
     def respond(self, text):
         index = self.svm.predict([self.nlp(text).vector])[0]
