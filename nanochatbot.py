@@ -28,7 +28,7 @@ class NanoChatbot:
                 train_x.append(question)
                 train_y.append(index)
 
-        train_x_word_vectors =  [self.nlp(text).vector for text in train_x]
+        train_x_word_vectors = [self.nlp(text).vector for text in train_x]
         
         self.svm = svm.SVC(kernel='linear')
         self.svm.fit(train_x_word_vectors, train_y)
