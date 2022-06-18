@@ -8,7 +8,7 @@ train_data = [
     Rule(questions=["Python ou java?", "Python ou C?"], answers=["Python :snake:"]),
 ]
 
-bot = NanoChatbot()
+bot = NanoChatbot(language='pt')
 bot.train(train_data)
 
 while 1:

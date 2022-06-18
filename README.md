@@ -15,7 +15,7 @@ python -m spacy download pt_core_news_lg
 
 For english support
 ```
-python -m spacy download pt_core_news_lg
+python -m spacy download en_core_web_lg
 ```
 
 ## Quick Start
@@ -30,7 +30,7 @@ train_data = [
     Rule(questions=["Python ou java?", "Python ou C?"], answers=["Python :snake:"]),
 ]
 
-bot = NanoChatbot()
+bot = NanoChatbot(language='pt')
 bot.train(train_data)
 
 while 1:
