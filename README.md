@@ -1,7 +1,6 @@
 # NanoChatbot
 
 Nanochatbot is a simple chatbot with few lines of code, designed to be CPU efficient.
-If you are looking for more accurate chatbots with more options, look into rasa chatbot.
 
 ## Installation
 
