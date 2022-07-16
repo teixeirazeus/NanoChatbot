@@ -1,5 +1,7 @@
 # NanoChatbot
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d1467b3f64184b72b42df0274e848448)](https://app.codacy.com/gh/teixeirazeus/NanoChatbot?utm_source=github.com&utm_medium=referral&utm_content=teixeirazeus/NanoChatbot&utm_campaign=Badge_Grade_Settings)
+
 Nanochatbot is a simple chatbot with few lines of code, designed to be CPU efficient.
 
 ## Installation
