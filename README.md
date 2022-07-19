@@ -6,22 +6,22 @@ Nanochatbot is a simple chatbot with few lines of code, designed to be CPU effic
 
 ## Installation
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 For portuguese support
-```
+```bash
 python -m spacy download pt_core_news_lg
 ```
 
 For english support
-```
+```bash
 python -m spacy download en_core_web_lg
 ```
 
 ## Quick Start
-```
+```python
 from nanochatbot import NanoChatbot, Rule
 
 train_data = [
